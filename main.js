@@ -8,3 +8,4 @@ list.append('carrot');
 list.prepend('rabbit');
 
 console.log(list.size());
+console.log(list.getHead());
