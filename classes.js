@@ -1,63 +1,50 @@
-export class LinkedList {
-  constructor(list = []) {
-    this.list = list;
-  }
-
-  append(value) {
-    this.list.push(value);
-  }
-
-  prepend(value) {
-    this.list.unshift(value);
-  }
-
-  size() {
-    return this.list.length;
-  }
-
-  head() {
-    return this.list[0];
-  }
-
-  tail() {
-    return this.list[this.list.length - 1];
-  }
-
-  at(index) {
-    return this.list[index];
-  }
-
-  pop() {
-    this.list.pop();
-  }
-
-  contains(value) {
-    return this.list.find(node => node === value);
-  }
-
-  find(value) {
-    this.list.find((node, index) => {
-      if (node === value) {
-        return index;
-      }
-
-      return null;
-    });
-  }
-
-  toString() {
-    let result = '';
-    for (let i = 0; i < this.list.length; i++) {
-      result += ` ( ${this.list[i]} ) ->`;
-    }
-
-    return result;
-  }
-}
-
 class Node {
   constructor(data, nextNode = null) {
     this.data = data;
     this.nextNode = nextNode;
+  }
+}
+
+export class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  // Add new node to the end
+  append(value) {
+    const newNode = new Node(value);
+    let current = this.head;
+
+    if (this.head === null) {
+      this.head = newNode;
+      return;
+    }
+
+    while (current.nextNode) {
+      current = current.nextNode;
+    }
+
+    current.nextNode = newNode;
+  }
+
+  // Add new node to the start
+  prepend(value) {
+    const newNode = new Node(value);
+
+    newNode.nextNode = this.head;
+    this.head = newNode;
+  }
+
+  // Return the size of the list
+  size() {
+    let current = this.head;
+    let nodes = 0;
+
+    while (current) {
+      current = current.nextNode;
+      nodes++;
+    }
+
+    return nodes;
   }
 }
