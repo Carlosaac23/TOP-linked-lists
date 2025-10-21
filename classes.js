@@ -12,19 +12,19 @@ export class LinkedList {
   }
 
   size() {
-    this.list.length;
+    return this.list.length;
   }
 
   head() {
-    this.list[0];
+    return this.list[0];
   }
 
   tail() {
-    this.list[this.list.length - 1];
+    return this.list[this.list.length - 1];
   }
 
   at(index) {
-    this.list[index];
+    return this.list[index];
   }
 
   pop() {
@@ -32,7 +32,7 @@ export class LinkedList {
   }
 
   contains(value) {
-    return this.list.find((node) => node === value);
+    return this.list.find(node => node === value);
   }
 
   find(value) {
@@ -46,9 +46,12 @@ export class LinkedList {
   }
 
   toString() {
+    let result = '';
     for (let i = 0; i < this.list.length; i++) {
-      `( ${this.list[i]} ) ->`;
+      result += ` ( ${this.list[i]} ) ->`;
     }
+
+    return result;
   }
 }
 
