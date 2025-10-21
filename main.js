@@ -1,7 +1,9 @@
-class Node {
-  constructor(data) {
-    this.data = data;
-  }
-}
+import { LinkedList } from './classes.js';
 
-// Comentario para commitear algo el día de hoy, después lo borro :)
+const list = new LinkedList();
+
+list.append('dog');
+list.append('cat');
+list.append('carrot');
+
+console.log(list.toString());
