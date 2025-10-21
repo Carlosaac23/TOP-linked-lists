@@ -47,4 +47,9 @@ export class LinkedList {
 
     return nodes;
   }
+
+  // Return the first node in the list
+  getHead() {
+    return this.head;
+  }
 }
