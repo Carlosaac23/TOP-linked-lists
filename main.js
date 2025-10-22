@@ -4,8 +4,11 @@ const list = new LinkedList();
 
 list.append('dog');
 list.append('cat');
-list.append('carrot');
-list.prepend('rabbit');
+list.append('parrot');
+list.prepend('hamster');
+list.prepend('snake');
+list.prepend('turtle');
 
 console.log(list.size());
-console.log(list.getHead());
+console.log('First: ', list.getHead());
+console.log('Last: ', list.getTail());
