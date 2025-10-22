@@ -164,4 +164,19 @@ export class LinkedList {
     newNode.nextNode = previousNode.nextNode;
     previousNode.nextNode = newNode;
   }
+
+  // Remove the node at the given index.
+  removeAt(index) {
+    const currentNode = this.at(index);
+
+    if (!currentNode) return null;
+
+    if (index === 0) {
+      this.head = currentNode.nextNode;
+      return;
+    }
+
+    const previousNode = this.at(index - 1);
+    previousNode.nextNode = currentNode.nextNode;
+  }
 }
