@@ -34,3 +34,10 @@ console.log(list.toString()); // ( shark ) -> ( turtle ) -> ( snake ) -> ( hamst
 
 list.insertAt('dinosaur', 3);
 console.log(list.toString()); // ( shark ) -> ( turtle ) -> ( snake ) -> ( dinosaur ) -> ( hamster ) -> ( dog ) -> ( cat ) -> null
+
+// Remove node at any index you want
+list.removeAt(3);
+console.log(list.toString()); // ( shark ) -> ( turtle ) -> ( snake ) -> ( hamster ) -> ( dog ) -> ( cat ) -> null
+
+list.removeAt(0);
+console.log(list.toString()); // ( turtle ) -> ( snake ) -> ( hamster ) -> ( dog ) -> ( cat ) -> null
