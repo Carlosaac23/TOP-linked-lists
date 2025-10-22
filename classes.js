@@ -65,4 +65,21 @@ export class LinkedList {
 
     return current;
   }
+
+  // Return the node at the given index
+  at(index) {
+    let currentNode = this.head;
+    let currentIndex = 0;
+
+    while (currentNode) {
+      if (currentIndex === index) {
+        return currentNode;
+      }
+
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+
+    return null;
+  }
 }
