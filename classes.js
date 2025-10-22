@@ -118,4 +118,34 @@ export class LinkedList {
 
     return false;
   }
+
+  // Returns the index of the node containing value, or null if not found
+  find(value) {
+    let currentNode = this.head;
+    let currentIndex = 0;
+
+    while (currentNode) {
+      if (currentNode.data === value) {
+        return currentIndex;
+      }
+
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+
+    return null;
+  }
+
+  // Represents your LinkedList objects as strings, so you can print them out and preview them in the console.
+  toString() {
+    let currentNode = this.head;
+    let result = '';
+
+    while (currentNode) {
+      result += `( ${currentNode.data} ) -> `;
+      currentNode = currentNode.nextNode;
+    }
+
+    return result + 'null';
+  }
 }
