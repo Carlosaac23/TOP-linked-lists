@@ -103,4 +103,19 @@ export class LinkedList {
     // "Delete" the last node
     currentNode.nextNode = null;
   }
+
+  // Returns true if the passed in value is in the list and otherwise returns false
+  contains(value) {
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (currentNode.data === value) {
+        return true;
+      }
+
+      currentNode = currentNode.nextNode;
+    }
+
+    return false;
+  }
 }
