@@ -13,18 +13,18 @@ export class LinkedList {
   // Add new node to the end
   append(value) {
     const newNode = new Node(value);
-    let current = this.head;
+    let currentNode = this.head;
 
-    if (!current) {
+    if (!currentNode) {
       this.head = newNode;
       return;
     }
 
-    while (current.nextNode) {
-      current = current.nextNode;
+    while (currentNode.nextNode) {
+      currentNode = currentNode.nextNode;
     }
 
-    current.nextNode = newNode;
+    currentNode.nextNode = newNode;
   }
 
   // Add new node to the start
@@ -37,11 +37,11 @@ export class LinkedList {
 
   // Return the size of the list
   size() {
-    let current = this.head;
+    let currentNode = this.head;
     let nodes = 0;
 
-    while (current) {
-      current = current.nextNode;
+    while (currentNode) {
+      currentNode = currentNode.nextNode;
       nodes++;
     }
 
@@ -55,15 +55,15 @@ export class LinkedList {
 
   // return the last node in the list
   getTail() {
-    let current = this.head;
+    let currentNode = this.head;
 
-    if (!current) return null;
+    if (!currentNode) return null;
 
-    while (current.nextNode) {
-      current = current.nextNode;
+    while (currentNode.nextNode) {
+      currentNode = currentNode.nextNode;
     }
 
-    return current;
+    return currentNode;
   }
 
   // Return the node at the given index
