@@ -9,7 +9,7 @@ list.prepend('hamster');
 list.prepend('snake');
 list.prepend('turtle');
 
-console.log(list.size());
-console.log('First: ', list.getHead());
-console.log('Last: ', list.getTail());
-console.log('At index: ', list.at(4));
+console.log('Size of the list: ', list.size());
+console.log('First Node: ', list.getHead());
+console.log('Last Node: ', list.getTail());
+console.log('Node at index: ', list.at(4));
