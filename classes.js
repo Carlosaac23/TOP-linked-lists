@@ -82,4 +82,25 @@ export class LinkedList {
 
     return null;
   }
+
+  // Remove the last node
+  pop() {
+    let currentNode = this.head;
+
+    // If there is no node
+    if (!currentNode) return null;
+
+    // If there is only one node
+    if (currentNode.nextNode === null) {
+      this.head = null;
+      return;
+    }
+
+    while (currentNode.nextNode && currentNode.nextNode.nextNode !== null) {
+      currentNode = currentNode.nextNode;
+    }
+
+    // "Delete" the last node
+    currentNode.nextNode = null;
+  }
 }
