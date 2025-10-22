@@ -13,3 +13,7 @@ console.log('Size of the list: ', list.size());
 console.log('First Node: ', list.getHead());
 console.log('Last Node: ', list.getTail());
 console.log('Node at index: ', list.at(4));
+
+// Delete the last node
+list.pop();
+console.log('New last node: ', list.getTail());
