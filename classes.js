@@ -15,7 +15,7 @@ export class LinkedList {
     const newNode = new Node(value);
     let current = this.head;
 
-    if (this.head === null) {
+    if (!current) {
       this.head = newNode;
       return;
     }
