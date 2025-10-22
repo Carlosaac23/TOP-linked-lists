@@ -52,4 +52,17 @@ export class LinkedList {
   getHead() {
     return this.head;
   }
+
+  // return the last node in the list
+  getTail() {
+    let current = this.head;
+
+    if (!current) return null;
+
+    while (current.nextNode) {
+      current = current.nextNode;
+    }
+
+    return current;
+  }
 }
