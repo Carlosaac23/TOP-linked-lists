@@ -148,4 +148,20 @@ export class LinkedList {
 
     return result + 'null';
   }
+
+  // Insert a new node at the provided index
+  insertAt(value, index) {
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+
+    const previousNode = this.at(index - 1);
+
+    if (!previousNode) return null;
+
+    const newNode = new Node(value);
+    newNode.nextNode = previousNode.nextNode;
+    previousNode.nextNode = newNode;
+  }
 }
