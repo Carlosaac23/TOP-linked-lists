@@ -27,3 +27,10 @@ console.log('Snake its at the index: ', list.find('snake'));
 
 // Show the whole list
 console.log(list.toString());
+
+// Insert new node at any index you want
+list.insertAt('shark', 0);
+console.log(list.toString()); // ( shark ) -> ( turtle ) -> ( snake ) -> ( hamster ) -> ( dog ) -> ( cat ) -> null
+
+list.insertAt('dinosaur', 3);
+console.log(list.toString()); // ( shark ) -> ( turtle ) -> ( snake ) -> ( dinosaur ) -> ( hamster ) -> ( dog ) -> ( cat ) -> null
