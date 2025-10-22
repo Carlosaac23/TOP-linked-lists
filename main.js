@@ -21,3 +21,9 @@ console.log('New last node: ', list.getTail());
 // Return true if the node data is the same as the value, not if there is not that data
 console.log(list.contains('parrot')); // false
 console.log(list.contains('cat')); // true
+
+// Return the index of the node containing value
+console.log('Snake its at the index: ', list.find('snake'));
+
+// Show the whole list
+console.log(list.toString());
